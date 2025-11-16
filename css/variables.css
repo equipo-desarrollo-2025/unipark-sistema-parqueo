@@ -1,0 +1,57 @@
+/* ===== VARIABLES CSS ===== */
+:root {
+    /* Colores de estado */
+    --color-libre: #4CAF50;
+    --color-ocupado: #F44336;
+    --color-reservado: #FF9800;
+    --color-mantenimiento: #9E9E9E;
+    
+    /* Colores primarios */
+    --primary-color: #2196F3;
+    --primary-dark: #1976D2;
+    --primary-light: #BBDEFB;
+    
+    /* Colores neutros */
+    --background: #f8f9fa;
+    --surface: #ffffff;
+    --text-primary: #212121;
+    --text-secondary: #757575;
+    --border: #e0e0e0;
+    
+    /* Espaciado */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    
+    /* Bordes */
+    --border-radius: 8px;
+    --border-radius-lg: 12px;
+    
+    /* Sombras */
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 8px rgba(0,0,0,0.15);
+    --shadow-lg: 0 8px 16px rgba(0,0,0,0.2);
+    
+    /* Tipografía */
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    
+    /* Transiciones */
+    --transition: all 0.3s ease;
+}
+
+/* ===== MODOS DE COLOR ===== */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #121212;
+        --surface: #1e1e1e;
+        --text-primary: #ffffff;
+        --text-secondary: #b0b0b0;
+        --border: #333333;
+    }
+}

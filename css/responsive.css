@@ -1,0 +1,69 @@
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        padding: var(--spacing-md);
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .view {
+        padding: var(--spacing-md);
+    }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cupos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+        gap: var(--spacing-xs);
+    }
+    
+    .cupo {
+        font-size: var(--font-size-sm);
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .nav-link {
+        text-align: center;
+        width: 100%;
+    }
+    
+    #map-container {
+        height: 300px;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .nav-brand span {
+        display: none;
+    }
+    
+    .metric-value {
+        font-size: 2rem;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: var(--spacing-sm);
+    }
+}

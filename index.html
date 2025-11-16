@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniPark - Sistema de Gestión de Parqueo</title>
+    <meta name="description" content="Sistema inteligente de gestión de parqueo para motocicletas universitarias">
+    
+    <!-- Preload crítico -->
+    <link rel="preload" href="css/variables.css" as="style">
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="js/app.js" as="script">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="assets/images/logo.svg" alt="UniPark Logo" class="logo">
+            <span>UniPark 🏍️</span>
+        </div>
+        
+        <div class="nav-links">
+            <button class="nav-link active" data-view="dashboard">
+                📊 Dashboard
+            </button>
+            <button class="nav-link" data-view="mapa">
+                🗺️ Mapa en Tiempo Real
+            </button>
+            <button class="nav-link" data-view="gestion">
+                👮 Gestión Vigilantes
+            </button>
+            <button class="nav-link" data-view="busqueda">
+                🔍 Búsqueda
+            </button>
+        </div>
+        
+        <div class="nav-info" id="weather-info">
+            <!-- Clima se carga dinámicamente -->
+        </div>
+    </nav>
+
+    <!-- Main App Container -->
+    <main id="app">
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Cargando sistema UniPark...</p>
+        </div>
+        
+        <!-- Vistas se cargan dinámicamente aquí -->
+
+
+        <!-- Botón flotante para reset -->
+<button id="floating-reset" 
+        onclick="app.reiniciarDatos()"
+        style="position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px; background: #FF9800; color: white; border: none; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.3); z-index: 1000; font-size: 20px; display: flex; align-items: center; justify-content: center;"
+        title="Reiniciar datos de demostración">
+    🔄
+</button>
+
+<style>
+#floating-reset:hover {
+    transform: scale(1.1);
+    background: #F57C00;
+}
+</style>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <div>
+            <p style="margin: 0;">&copy; 2025 UniPark - Sistema de Gestión de Parqueo Universitario</p>
+            <p style="margin: 5px 0 0 0; font-size: 12px;">Desarrollado para mejorar la movilidad en el campus</p>
+        </div>
+        <button onclick="app.reiniciarDatos()" 
+                style="padding: 6px 12px; background: transparent; color: #666; border: 1px solid #ddd; border-radius: 4px; cursor: pointer; font-size: 11px;"
+                title="Reiniciar datos de prueba">
+            🔄 Reset Demo
+        </button>
+    </div>
+</footer>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/storage.js"></script>
+   <script src="js/auth.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/gestion.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/app.js"></script>
+    
+    <!-- Google Maps API (se carga dinámicamente) -->
+ 
+   <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap"></script>
+    -->
+</body>
+
+</html>
